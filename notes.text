@@ -11,3 +11,18 @@
 ---------->Pydantic validates request data automatically .it's important  becoz auto validation,prevents wrong data,generates API docs automatically
 
 ---------->Response model controls what is sent back to client
+
+---------->Dependency injection used for reusable logic like auth, DB Connection
+
+def get_db();
+    return "DB"
+@app.get("/data")
+def data(db = Depends(get_db)):
+    return db
+
+
+----------->sync  ---function that blocks execution .Each request wait 5 sec one by one and also the server becomes very slow
+----------->async --function that allows non-block execution using await which is ideal for i/o operations like database calls, API requests and file handling.
+            All wait together not one by one.server is fast...
+
+----------->JWT auth (JSON WEB TOKEN)--it's a secure token that proves the user is authenticated...
