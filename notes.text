@@ -1,0 +1,13 @@
+---------->FastApi is a modern , high performance python web framework used to build APIs and it's completely based on starlette(for web) and Pydantic(data validation).
+
+---------->FastApi is faster than falsk or django because it uses ASGI,async and await,starlette's non-blocking I/O operations
+---------->get is for fetching data in URL --->post is to send data in body
+
+---------->path parameter used to identify a specific resource
+---------->Query parameter used to filter,sort or give extra instructions to api
+
+(eg) /products?category = mobile & price = low
+
+---------->Pydantic validates request data automatically .it's important  becoz auto validation,prevents wrong data,generates API docs automatically
+
+---------->Response model controls what is sent back to client
